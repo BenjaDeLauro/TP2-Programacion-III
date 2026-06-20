@@ -18,28 +18,32 @@ export default function GameCard({ juego }) {
   }
 
   return (
-    <article className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden shadow-lg flex flex-col">
-      <img
-        src={juego.background_image || "/placeholder.jpg"}
-        alt={juego.name}
-        className="w-full h-48 object-cover"
-      />
+    <article className="group overflow-hidden rounded-2xl border border-cyan-400/20 bg-slate-950/70 shadow-xl shadow-slate-950/40 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/60">
+      <div className="relative">
+        <img
+          src={juego.background_image || "/placeholder.jpg"}
+          alt={juego.name}
+          className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+        />
 
-      <div className="p-5 flex flex-col flex-1">
-        <h2 className="text-xl font-bold mb-2">{juego.name}</h2>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
 
-        <p className="text-zinc-400 mb-2">
-          Rating: {juego.rating || "Sin calificación"}
-        </p>
+        <span className="absolute right-4 top-4 rounded-full bg-slate-950/80 px-3 py-1 text-sm font-bold text-cyan-300 backdrop-blur">
+          ⭐ {juego.rating || "N/D"}
+        </span>
+      </div>
 
-        <p className="text-zinc-400 mb-4">
+      <div className="p-5">
+        <h2 className="mb-2 text-xl font-black">{juego.name}</h2>
+
+        <p className="mb-4 text-sm text-slate-400">
           Lanzamiento: {juego.released || "No disponible"}
         </p>
 
-        <div className="mt-auto flex gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row">
           <Link
             href={`/juegos/${juego.id}`}
-            className="bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg font-semibold"
+            className="flex-1 rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-center font-semibold text-cyan-200 hover:bg-cyan-400/20"
           >
             Ver detalle
           </Link>

@@ -2,52 +2,93 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <section className="min-h-[80vh] flex items-center">
-      <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <p className="text-purple-400 font-semibold mb-3">
-            Trabajo Práctico N° 2 - Programación III
-          </p>
+    <section className="relative overflow-hidden">
+      <div className="absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-3xl"></div>
+      <div className="absolute right-10 top-60 h-80 w-80 rounded-full bg-blue-700/30 blur-3xl"></div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Bienvenido a GameHub
+      <div className="relative mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
+        <div>
+          <div className="mb-5 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
+            Tu portal gamer para descubrir nuevos títulos
+          </div>
+
+          <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight md:text-7xl">
+            Descubrí juegos, explorá detalles y guardá tus favoritos.
           </h1>
 
-          <p className="text-zinc-300 text-lg mb-8">
-            Una plataforma de videojuegos desarrollada con Next.js, Tailwind,
-            rutas dinámicas, componentes reutilizables, Context, localStorage
-            y consumo de una API externa.
+          <p className="mb-8 max-w-xl text-lg leading-8 text-slate-300">
+            GameHub es una plataforma pensada para explorar videojuegos,
+            consultar información relevante y armar tu propia lista de favoritos
+            de manera rápida y simple.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row">
             <Link
               href="/juegos"
-              className="bg-purple-600 hover:bg-purple-700 px-5 py-3 rounded-lg font-semibold"
+              className="rounded-xl bg-gradient-to-r from-cyan-400 to-blue-600 px-6 py-3 text-center font-bold text-slate-950 shadow-lg shadow-cyan-500/25 transition hover:scale-105"
             >
-              Ver juegos
+              Explorar juegos
             </Link>
 
             <Link
-              href="/nosotros"
-              className="border border-zinc-700 hover:bg-zinc-900 px-5 py-3 rounded-lg font-semibold"
+              href="/favoritos"
+              className="rounded-xl border border-cyan-400/30 bg-white/5 px-6 py-3 text-center font-bold text-cyan-100 backdrop-blur transition hover:bg-cyan-400/10"
             >
-              Sobre el proyecto
+              Ver favoritos
             </Link>
           </div>
         </div>
 
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold mb-4">Requisitos cumplidos</h2>
+        <div className="relative">
+          <div className="rounded-3xl border border-cyan-400/20 bg-white/10 p-6 shadow-2xl shadow-cyan-950/60 backdrop-blur-xl">
+            <div className="mb-6 flex items-center justify-between">
+              <div>
+                <p className="text-sm text-slate-400">Ranking semanal</p>
+                <h2 className="text-2xl font-bold">Juegos populares</h2>
+              </div>
 
-          <ul className="space-y-3 text-zinc-300">
-            <li>✅ Rutas base</li>
-            <li>✅ Ruta dinámica</li>
-            <li>✅ Ruta anidada</li>
-            <li>✅ Layout principal y layout anidado</li>
-            <li>✅ Componentes reutilizables</li>
-            <li>✅ Context y localStorage</li>
-            <li>✅ Consumo de API externa</li>
-          </ul>
+              <span className="rounded-full bg-cyan-400/20 px-3 py-1 text-sm font-semibold text-cyan-300">
+                Live
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-bold">Cyberpunk 2077</h3>
+                    <p className="text-sm text-slate-400">RPG / Acción</p>
+                  </div>
+                  <p className="text-cyan-300">9.1</p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-bold">Elden Ring</h3>
+                    <p className="text-sm text-slate-400">Aventura / Fantasía</p>
+                  </div>
+                  <p className="text-cyan-300">9.5</p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-bold">GTA V</h3>
+                    <p className="text-sm text-slate-400">Mundo abierto</p>
+                  </div>
+                  <p className="text-cyan-300">9.0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-cyan-400/20 bg-slate-950/80 p-5 shadow-xl backdrop-blur md:block">
+            <p className="text-sm text-slate-400">Favoritos guardados</p>
+            <p className="text-3xl font-black text-cyan-300">+120K</p>
+          </div>
         </div>
       </div>
     </section>

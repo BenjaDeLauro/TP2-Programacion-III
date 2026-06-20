@@ -19,10 +19,9 @@ export default function NosotrosPage() {
           <h2 className="text-2xl font-bold mb-3">Integrantes</h2>
 
           <ul className="list-disc list-inside text-zinc-300">
-            <li>Integrante 1</li>
-            <li>Integrante 2</li>
-            <li>Integrante 3</li>
-            <li>Integrante 4</li>
+            <li>Esteban Rodriguez</li>
+            <li>Benjamin Delauro</li>
+
           </ul>
         </div>
       </div>

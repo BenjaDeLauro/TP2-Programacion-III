@@ -7,30 +7,49 @@ export default function Navbar() {
   const { favoritos } = useFavoritos();
 
   return (
-    <header className="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-purple-400">
-          GameHub
+    <header className="sticky top-0 z-50 border-b border-cyan-400/20 bg-slate-950/70 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-4 md:flex-row">
+        <Link href="/" className="group flex items-center gap-2">
+          <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-700 shadow-lg shadow-cyan-500/30"></div>
+
+          <span className="text-2xl font-black tracking-tight">
+            Game<span className="text-cyan-400">Hub</span>
+          </span>
         </Link>
 
-        <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
-          <Link href="/" className="hover:text-purple-400">
+        <div className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium text-slate-300 md:gap-4 md:text-base">
+          <Link
+            href="/"
+            className="rounded-full px-4 py-2 hover:bg-cyan-400/10 hover:text-cyan-300"
+          >
             Inicio
           </Link>
 
-          <Link href="/juegos" className="hover:text-purple-400">
+          <Link
+            href="/juegos"
+            className="rounded-full px-4 py-2 hover:bg-cyan-400/10 hover:text-cyan-300"
+          >
             Juegos
           </Link>
 
-          <Link href="/favoritos" className="hover:text-purple-400">
+          <Link
+            href="/favoritos"
+            className="rounded-full px-4 py-2 hover:bg-cyan-400/10 hover:text-cyan-300"
+          >
             Favoritos ({favoritos.length})
           </Link>
 
-          <Link href="/dashboard" className="hover:text-purple-400">
-            Dashboard
+          <Link
+            href="/dashboard"
+            className="rounded-full px-4 py-2 hover:bg-cyan-400/10 hover:text-cyan-300"
+          >
+            Panel
           </Link>
 
-          <Link href="/nosotros" className="hover:text-purple-400">
+          <Link
+            href="/nosotros"
+            className="rounded-full px-4 py-2 hover:bg-cyan-400/10 hover:text-cyan-300"
+          >
             Nosotros
           </Link>
         </div>
