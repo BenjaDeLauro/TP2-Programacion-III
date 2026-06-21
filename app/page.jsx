@@ -39,7 +39,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="space-y-5">
           <div className="rounded-3xl border border-cyan-400/20 bg-white/10 p-6 shadow-2xl shadow-cyan-950/60 backdrop-blur-xl">
             <div className="mb-6 flex items-center justify-between">
               <div>
@@ -59,7 +59,7 @@ export default function HomePage() {
                     <h3 className="font-bold">Cyberpunk 2077</h3>
                     <p className="text-sm text-slate-400">RPG / Acción</p>
                   </div>
-                  <p className="text-cyan-300">9.1</p>
+                  <p className="font-bold text-cyan-300">9.1</p>
                 </div>
               </div>
 
@@ -67,9 +67,11 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-bold">Elden Ring</h3>
-                    <p className="text-sm text-slate-400">Aventura / Fantasía</p>
+                    <p className="text-sm text-slate-400">
+                      Aventura / Fantasía
+                    </p>
                   </div>
-                  <p className="text-cyan-300">9.5</p>
+                  <p className="font-bold text-cyan-300">9.5</p>
                 </div>
               </div>
 
@@ -79,15 +81,22 @@ export default function HomePage() {
                     <h3 className="font-bold">GTA V</h3>
                     <p className="text-sm text-slate-400">Mundo abierto</p>
                   </div>
-                  <p className="text-cyan-300">9.0</p>
+                  <p className="font-bold text-cyan-300">9.0</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-cyan-400/20 bg-slate-950/80 p-5 shadow-xl backdrop-blur md:block">
-            <p className="text-sm text-slate-400">Favoritos guardados</p>
-            <p className="text-3xl font-black text-cyan-300">+120K</p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-5 shadow-xl backdrop-blur">
+              <p className="text-sm text-slate-400">Favoritos guardados</p>
+              <p className="text-3xl font-black text-cyan-300">+120K</p>
+            </div>
+
+            <div className="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-5 shadow-xl backdrop-blur">
+              <p className="text-sm text-slate-400">Juegos disponibles</p>
+              <p className="text-3xl font-black text-cyan-300">+10</p>
+            </div>
           </div>
         </div>
       </div>
