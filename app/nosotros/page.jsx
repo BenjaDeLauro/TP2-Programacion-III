@@ -1,27 +1,26 @@
 export default function NosotrosPage() {
   return (
-    <section className="max-w-6xl mx-auto px-6 py-10">
-      <h1 className="text-4xl font-bold mb-6">Sobre el proyecto</h1>
+    <section className="mx-auto max-w-6xl px-6 py-10">
+      <h1 className="mb-6 text-4xl font-black">Sobre el proyecto</h1>
 
-      <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 space-y-4">
-        <p className="text-zinc-300">
-          GameHub es una plataforma de videojuegos creada como trabajo práctico
-          para la materia Programación III.
-        </p>
-
-        <p className="text-zinc-300">
+      <div className="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-6 shadow-xl backdrop-blur">
+        <p className="mb-6 leading-7 text-slate-300">
           La aplicación utiliza Next.js, Tailwind CSS, rutas dinámicas,
           componentes reutilizables, Context API, localStorage y consumo de una
           API externa de videojuegos.
         </p>
 
         <div>
-          <h2 className="text-2xl font-bold mb-3">Integrantes</h2>
+          <h2 className="mb-4 text-2xl font-bold">Integrantes</h2>
 
-          <ul className="list-disc list-inside text-zinc-300">
-            <li>Esteban Rodriguez</li>
-            <li>Benjamin Delauro</li>
+          <ul className="space-y-2 text-slate-300">
+            <li className="rounded-xl bg-slate-900/80 px-4 py-3">
+              Esteban Rodriguez
+            </li>
 
+            <li className="rounded-xl bg-slate-900/80 px-4 py-3">
+              Benjamin Delauro
+            </li>
           </ul>
         </div>
       </div>
